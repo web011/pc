@@ -1,0 +1,59 @@
+.products{
+    background-color: #fff;
+    height: 494px;
+    width: 100%;
+    position: relative;
+}
+.products>.products_title{
+    position: absolute;
+    top: 110px;
+    left: 150px;
+}
+.products>.products_float{
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+.products>.products_title>.span1{
+    font-size: 32px;
+    color: rgb(29, 28, 28);
+    padding-bottom: 10px;
+}
+.products>.products_title>.span2{
+    color: rgb(161, 161, 161);
+    font-size: 14px;
+}
+.products>.products_float>.products_changp{
+    float: left;
+    height: 100px;
+    margin-right: 200px;
+    text-align: center;
+}
+.products>.products_float>.products_changp>img{
+    margin-bottom: 20px;
+}
+.products>.cts{
+    position: absolute;top: 250px;left: 145px;
+}
+.products>.cts .ctsp,.products>.cts1 .ctsp{
+    height: 156px;width: 373px;
+    margin-right: 40px;
+    position: relative;
+}
+.products>.cts .ctsp>div,.products>.cts1 .ctsp>div{
+    position: absolute;
+    top: 45px;
+    left: 40px;
+}
+.products>.cts .ctsp>div .span1,.products>.cts1 .ctsp>div .span1{
+    color: rgb(55, 55, 55);font-size: 18px;
+}
+.products>.cts .ctsp>div .span2,.products>.cts1 .ctsp>div .span2{
+    color: rgb(126, 126, 126);font-size: 14px;
+}
+.products>.cts1{
+    position: absolute;bottom: 100px;left: 300px;
+}
+.products>.cts1 .ctsp,.products>.cts1 .ctsp{
+    margin-right: 130px;
+}

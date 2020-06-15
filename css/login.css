@@ -1,0 +1,117 @@
+#context{
+    width: 100%;
+    height: 440px;
+background: url(../img/login/login.jpg) no-repeat;
+}
+#context::before{
+    content:"";
+    display:table;
+}
+#continue{
+width:273px;height:260px;
+    margin-top:70px;
+    margin-left:190px;
+    padding:12px;
+    background:rgba(0,0,0,0.3);
+}
+#continue table{
+    width:100%;height:40px;
+}
+#continue table h4{
+    margin:10px;
+    color:#fff;
+}
+#continue table a{
+    color:#fff;
+    text-decoration:none;
+}
+.uname,.upwd{
+    width:100%;height:30px;
+    margin:12px 0;
+    background:#fff url(../img/login/yhm.png) no-repeat 97% center;
+    border:0;outline:0;
+    box-sizing:border-box;
+    padding:7px 13px;
+    font-size:14px;
+}
+.upwd{
+    background:#fff url(../img/login/mm.png) no-repeat 97% center;
+}
+table label{
+    color:#fff;
+    font-size:13px;
+}
+button{
+    width:100%;height:30px;
+    border:0;
+    background:#0aa1ed;
+    margin:12px 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.weixing{
+    width: 350px;
+    height: 500px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -150px;
+}
+.weixing>#weixingdenglu{
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    line-height: 80px;
+    border-bottom: 1px solid #e3e2e8;
+}
+.weixing>#weixingdenglu>span{
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.di{display: none;}
+.alert{
+    border:1px solid #a33;
+    color:#922;
+    background:#fee;
+    padding:10px;
+    width:400px;
+    height:100px;
+    position:fixed;
+    /*让div在窗口中垂直和水平都居中*/
+    box-sizing: border-box;
+    top:50%;
+    left:50%;
+    margin-top:200px;
+    margin-left:-200px;
+    text-align: center;
+}
+.alert>.close{
+    float:right;
+    font-weight:bold;
+    opacity:.5;
+    cursor:pointer;
+}
+.alert>.close:hover{opacity:1}
+.fade{ /*定义淡入淡出动画的初始状态,常驻元素*/
+    /* display:none; */
+    opacity:0;
+    height:100px;
+    width:400px;
+    margin-left:-200px;
+    margin-top:-100px;
+    overflow:hidden;
+    transition: all 1s linear;
+}
+.lin{ /*定义淡入淡出动画的结束状态*/
+    /* display:block; */
+    opacity:1;
+    height:80px;
+    width:400px;
+    margin-top:-50px;
+    margin-left:-200px;
+    border-radius: 3px;
+}
+.bg{background-color: rgb(197, 243, 207);color: #000;}

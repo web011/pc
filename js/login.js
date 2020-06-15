@@ -1,0 +1,76 @@
+var vm=new Vue({
+    el:"#app",
+    data:{
+        i:1,
+        n:1,
+      uname:"dingding",
+      upwd:"123456"
+    },
+    methods:{
+      mouse(){
+          this.i=0;
+          this.n=0;
+    },
+      login(){
+        axios.post(
+          "http://localhost:3000",
+          Qs.stringify({
+            uname:this.uname,
+            upwd:this.upwd
+          })
+        ).then(result=>{
+          //服务端:
+            //res.write({code:1或0})
+          if(result.data.code==1){
+                this.i=1;
+            // alert("登录成功！");
+                this.n=0;
+                setTimeout(() => {
+                  window.location.href="index.html";
+                }, 3000);
+          }else{
+            // alert("用户名或密码不正确!")
+                this.n=1;
+                this.i=0;
+          }
+          this.uname="";
+          this.upwd="";
+        })
+      }
+    }
+    /*login(){
+        axios.get(
+          "http://localhost:3000",
+          {
+            params:{
+              uname:this.uname,
+              upwd:this.upwd
+            }
+          }
+        ).then(result=>{
+          //服务端:
+            //res.write({code:1或0})
+          if(result.data.code==1){
+            alert("登录成功！");
+          }else{
+            alert("用户名或密码不正确!")
+          }
+          this.uname="";
+          this.upwd="";
+        })
+      }*/
+  })
+$(function(){
+    $("#wei").click(function(){
+        $("#di").removeClass("di");
+    })
+    $("#spanx").click(function(){
+        $("#di").addClass("di");
+    })
+    $("#btn").click(function(){
+        $("div.alert").addClass("lin")
+    })
+    $("span.close").click(function(){
+        $("div.fade").removeClass("lin");
+    })
+})

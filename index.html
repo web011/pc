@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header id="header" class="container"></header>
+    <div id="app">
+        <!-- 轮播图 -->
+        <main id="main">
+            <div id="banner">
+                <div id="btn-left">
+                    <img src="img/index/left_ar.png" alt="">
+                </div>
+                <div class="banner_text" v-show="i>=1">
+                    <h1>移动门户</h1>
+                    <p>开启移动场景营销</p>
+                    <p>本土化设计、海外高效传播、获取海外商机更轻松</p>
+                    <a href="javascript:;">了解详情</a>
+                </div>
+                <div class="banner_text" v-show="i<=0">
+                    <h1>外贸门户</h1>
+                    <p>开启全球贸易之门</p>
+                    <p>整合多种营销模式、提升企业曝光率、获取更多商机</p>
+                    <a href="javascript:;">了解详情</a>
+                </div>
+                <ul id="ul-imgs" class="transition" style="width: 6600px; margin-left: 0px;">
+                    <li>
+                        <img style="height: 100%; width: 100%;" src="img/index/banner1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img style="height: 100%; width: 100%;" src="img/index/banner2.jpg" alt="">
+                    </li>
+                    <!-- 注意！最后li个数要比实际图片张数多1，最后一个li里的img是重复第一张li的图片 -->
+                    <li>
+                        <img src="img/index/banner1.jpg" alt="">
+                    </li>
+                </ul>
+                <ul id="ul-idxs">
+                    <li class="active"></li>
+                    <li></li>
+                </ul>
+                <div id="btn-right">
+                    <img src="img/index/right_ar.png" alt="">
+                </div>
+            </div>
+        </main>
+        <!-- 轮播图下边的详情 -->
+        <div class="base">
+            <div class="base-ln">
+                <div style="width: 300px;">
+                    <div class="base-img">
+                        <img style="float: left; margin-right: 20px;" src="img/index/base1-1.png.webp" alt="">
+                    </div>
+                    <div class="base-title">
+                        <p>免费试用一个月</p>
+                        <span>办公协同</span>
+                    </div>
+                </div>
+                <div style="width: 300px; height: 170px;">
+                    <div class="base-img">
+                        <img style="float: left; margin-right: 20px;" src="img/index/base1-2.png.webp" alt="">
+                    </div>
+                    <div class="base-title">
+                        <p>快速了解我们</p>
+                        <span>航拍+VR展示</span>
+                    </div>
+                </div>
+                <div style="width: 300px; height: 170px;">
+                    <div class="base-img">
+                        <img style="float: left; margin-right: 20px;" src="img/index/base1-3.png.webp" alt="">
+                    </div>
+                    <div class="base-title">
+                        <p>营销宝</p>
+                        <span>企业H5营销指南</span>
+                    </div>
+                </div>
+                <div style="width: 300px; height: 170px;">
+                    <div class="base-img">
+                        <img style="float: left; margin-right: 20px;" src="img/index/base1-4.png.webp" alt="">
+                    </div>
+                    <div class="base-title">
+                        <p>扫码购</p>
+                        <span>助力企业实现社会化电商</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 服务产品 -->
+        <div class="products">
+            <div class="products_title">
+                <span class="span1">一站式企业互联网云服务产品</span><br>
+                <span class="span2">建站、营销、电商、协同、管理，专业产品助您轻松实现智能运营</span>
+            </div>
+            <div class="products_float">
+                <div class="products_changp">
+                    <img src="img/products/1.png.webp" alt=""><br>
+                    <span>数据库</span>
+                </div>
+                <div class="products_changp">
+                    <img src="img/products/2.png.webp" alt=""><br>
+                    <span>应用服务</span>
+                </div>
+                <div class="products_changp">
+                    <img src="img/products/3.png.webp" alt=""><br>
+                    <span>域名与网站</span>
+                </div>
+                <div class="products_changp">
+                    <img src="img/products/4.png.webp" alt=""><br>
+                    <span>网络</span>
+                </div>
+                <div class="products_changp">
+                    <img src="img/products/5.png.webp" alt=""><br>
+                    <span>存储和CDN</span>
+                </div>
+            </div>
+        </div>
+        <!-- 方案 -->
+        <div class="programme">
+            <div class="programme-width">
+                <div class="programme-left" @mouseover="mouse">
+                    <div class="mouse programme-v" data-i=1>
+                        <span data-i=1>全网电商解决方案</span>
+                    </div>
+                    <div class="programme-v" data-i=2>
+                        <span data-i=2>工业品内贸解决方案</span>
+                    </div>
+                    <div class="programme-v" data-i=3>
+                        <span data-i=3>机械行业信息展示解决方案</span>
+                    </div>
+                    <div class="programme-v" data-i=4>
+                        <span data-i=4>企业域名品牌保护方案</span>
+                    </div>
+                    <div class="programme-vi"></div>
+                </div>
+                <!-- 方案1 -->
+                <div class="programme-right" v-show="n==1">
+                    <div class="v" style="margin: 70px 0 0 0px;">
+                        <P>全网电商解决方案</P>
+                        <span>为中小企业搭建独立电商平台，提供行业电商解决方案。</span>
+                    </div>
+                    <div style="display: flex;margin-top: 60px;">
+                        <div class="programme-right-i">
+                            <img src="img/programme/1-1.webp" alt="">
+                            <p>IT线上线下协同 全网营销</p>
+                        </div>
+                        <div class="programme-right-i">
+                            <img src="img/programme/1-2.png.webp" alt="">
+                            <p style="margin-top: 13px;">打通线上线下渠道</p>
+                        </div>
+                        <div class="programme-right-i">
+                            <img src="img/programme/1-3.png.webp" alt="">
+                            <p>统计分析</p>
+                        </div>
+                    </div>
+                    <a href="javascript:;">了解详情</a>
+                </div>
+                <!-- 方案2 -->
+                <div class="programme-right" v-show="n==2">
+                    <div class="v" style="margin: 70px 0 0 0px;">
+                        <P>工业品内贸解决方案</P>
+                        <span>面向工业企业，提供产品推广，商机获取，客户管理的一站式营销管理解决方案</span>
+                    </div>
+                    <div style="display: flex;margin-top: 60px;">
+                        <div class="programme-right-i">
+                            <img src="img/programme/2-1.png.webp" alt="">
+                            <p>解决产品推广难</p>
+                        </div>
+                        <div class="programme-right-i">
+                            <img src="img/programme/2-2.png.webp" alt="">
+                            <p style="margin-top: 40px;">解决商机与客户管理问题</p>
+                        </div>
+                    </div>
+                    <a href="javascript:;">了解详情</a>
+                </div>
+                <!-- 方案3 -->
+                <div class="programme-right" v-show="n==3">
+                    <div class="v" style="margin: 70px 0 0 0px;">
+                        <P>机械行业信息展示解决方案</P>
+                        <span>围绕机械企业需求，打造集形象宣传、产品展示、意向获取、产品订购、服务支撑于一体的信息展示平台。</span>
+                    </div>
+                    <div style="display: flex;margin-top: 60px;">
+                        <div class="programme-right-i">
+                            <img src="img/programme/3-1.png.webp" alt="">
+                            <p style="margin-top: 38px;">IT线上线下协同 全网营销</p>
+                        </div>
+                        <div class="programme-right-i">
+                            <img src="img/programme/3-2.png.webp" alt="">
+                            <p style="margin-top: 27px;">全面产品展示</p>
+                        </div>
+                        <div class="programme-right-i">
+                            <img src="img/programme/3-3.png.webp" alt="">
+                            <p>打通线上线下渠道</p>
+                        </div>
+                    </div>
+                    <a href="javascript:;">了解详情</a>
+                </div>
+                <!-- 方案4 -->
+                <div class="programme-right" v-show="n==4">
+                    <div class="v" style="margin: 70px 0 0 0px;">
+                        <P>企业域名品牌保护方案</P>
+                        <span>根据多年积累的互联网专业服务经验，为应对互联网时代所带来的品牌发展冲击<br></span>
+                        <span>我们为企业提供全面、个性化的域名注册、信息管理、安全防护的互联网品牌资产保护解决方案。</span>
+                    </div>
+                    <div style="display: flex;margin-top: 60px;">
+                        <div class="programme-right-i">
+                            <img src="img/programme/1-1.webp" alt="">
+                            <p>IT线上线下协同 全网营销</p>
+                        </div>
+                        <div class="programme-right-i">
+                            <img src="img/programme/1-2.png.webp" alt="">
+                            <p style="margin-top: 13px;">打通线上线下渠道</p>
+                        </div>
+                    </div>
+                    <a href="javascript:;">了解详情</a>
+                </div>
+            </div>
+        </div>
+        <!-- 应用 -->
+        <div class="application">
+            <div class="application_width">
+                <div class="application_flex">
+                    <img src="img/application/1_1.png.webp" alt=""><br>
+                    <span>基础软件</span>
+                </div>
+                <div class="application_flex">
+                    <img src="img/application/1_2.png.webp" alt=""><br>
+                    <span>网站建设</span>
+                </div>
+                <div class="application_flex">
+                    <img src="img/application/1_3.png.webp" alt=""><br>
+                    <span>服务与培训</span>
+                </div>
+                <div class="application_flex application_border">
+                    <img class="img1" src="img/application/1_4.png.webp" alt=""><br>
+                    <span>企业应用</span>
+                </div>
+                <div class="application_flex application_margin">
+                    <img src="img/application/2-1.png.webp" alt=""><br>
+                    <span>安全市场</span>
+                </div>
+                <div class="application_flex application_margin">
+                    <img src="img/application/2-2.png.webp" alt=""><br>
+                    <span>API市场</span>
+                </div>
+                <div class="application_flex application_margin">
+                    <img src="img/application/2-3.png.webp" alt=""><br>
+                    <span>基础软件</span>
+                </div>
+                <div class="application_flex application_margin application_border">
+                    <img src="img/application/2-4.png.webp" alt=""><br>
+                    <span>大数据应用</span>
+                </div>
+            </div>
+        </div>
+        <!-- 介绍 -->
+        <div class="introduction">
+            <div class="explanation">
+                <p>为什么选择我们</p>
+                <span>您的企业电子商务专家</span>
+            </div>
+            <div class="introduction_width">
+                <div class="introduction_font">
+                    <span class="s">10</span>
+                    <span>年行业网经验服务</span>
+                </div>
+                <div class="introduction_font">
+                    <span class="s">12</span>
+                    <span>家分公司</span>
+                </div>
+                <div class="introduction_font">
+                    <span class="s">101</span>
+                    <span>万行业客户</span>
+                </div>
+            </div>
+        </div>
+        <!-- 右边的在线客服 -->
+        <div class="ds" @mouseover="shiyan" @mouseout="shiyan1">
+            <div id="d1">
+            <span style="color: #fff;padding: 20px 10px;">在<br>线<br>客<br>服</span>
+            </div>
+            <div id="d2" :class="mright">
+                <div style="padding: 25px 0px 0px 10px;border-bottom:1px dotted;">
+                    <div style="margin-bottom: 10px;">
+                        <img src="img/qq.gif" alt=""><span style="font-size: 14px; color: #666;">Amy</span>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <img src="img/qq.gif" alt=""><span style="font-size: 14px; color: #666;">Tina</span>
+                    </div>
+                </div>
+                <div style="margin-top:10px;margin-left: 10px;">
+                    <div style="float: left;">
+                        <img src="img/biao.png" alt="">
+                    </div>
+                    <div style="float: left;">
+                        <span style="font-size: 15px;color: #666; font-weight: bold;">工作时间</span>
+                    </div><br>
+                    <div style="margin-top: 11px;height: 70px; border-bottom:1px dotted;">
+                        <span style="font-size: 14px; color: #666;margin-bottom: 10px;display: inline-block;">周一至周五 ：8:30-17:30</span><br>
+                        <span style="font-size: 14px; color: #666;">周六至周日 ：9:00-17:00</span>
+                    </div>
+                </div>
+                <div style="margin-top:10px;margin-left: 10px;">
+                    <div style="float: left;">
+                        <img src="img/kianxiweix.png" alt="">
+                    </div>
+                    <div>
+                        <span style="font-size: 15px;color: #666; font-weight: bold;">联系方式</span>
+                    </div>
+                    <div style="margin-top: 11px;height: 70px;">
+                        <span style="font-size: 14px; color: #666;margin-bottom: 10px;display: inline-block;">客服热线：020-000-0000</span><br>
+                        <span style="font-size: 14px; color: #666;">邮箱：contact@fkadjkhsf.co</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="container"></footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

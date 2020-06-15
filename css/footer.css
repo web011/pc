@@ -1,0 +1,93 @@
+*{
+    margin: 0;padding: 0;
+}
+/* 腿部第一行 */
+.font{font-size: 18px !important;font-weight: lighter !important;}
+.font-span{font-size: 14px !important;color: rgb(156, 156, 156) !important;}
+.base{
+    background-image: url(../img/index/base-bacgkournd.jpg);
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+}
+.base>.base-ln{
+    width: 1200px;
+    display: flex;
+}
+.base>.base-ln .base-img{
+    margin-top: 50px;
+    text-align: left;
+}
+.base>.base-ln .base-title{
+    margin-top: 45px;
+}
+.base>.base-ln .base-title span,
+.base>.base-ln .base-title p{
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.base>.base-ln .base-title span{
+    font-size: 14px;
+    font-weight: lighter;
+}
+/* 腿部第二行 */
+.container1{
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.89);
+    display: flex;
+    justify-content: center;
+}
+.second{
+    width: 1200px;
+    position: relative;
+    color: rgb(157, 157, 157);
+    margin-top: 50px;
+}
+.second>.second-left{
+    position: absolute;
+    font-size: 18px;
+    top: 0;
+    left: 90px;
+}
+.second>.second-left>span{
+    font-size: 30px;
+}
+.in{
+    width: 48px;
+    height: 97px;
+    position: absolute;
+    top: 0;
+    left: 350px;
+}
+.second>.second-center{
+    position: absolute;
+    top: 32px;
+    right: 430px;
+}
+.in1{
+    width: 48px;
+    height: 97px;
+    position: absolute;
+    top: 0;
+    left: 805px;
+}
+.second>.second-right{
+    position: absolute;
+    top: 32px;
+    right: 145px;
+}
+.second>.foot{
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+.second>.foot>a{
+    color: rgb(157, 157, 157);
+    text-decoration:none;
+}
+.second>.foot>a:hover{
+    color: #fff;
+}

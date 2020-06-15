@@ -1,0 +1,51 @@
+<header id="header" class="container">
+    <div class="nva">
+        <!-- 头部 左 -->
+        <span class="nva-title">企业云服务</span>
+        <!-- 头部 中 -->
+        <ul class="nva-ul" id="nva">
+            <li><a id="n" href="javascript:;">首页</a></li>
+            <div><span class="nva-span"></span></div>
+            <li><a id="n1" href="javascript:;">公司产品</a></li>
+            <div><span class="nva-span"></span></div>
+            <li><a href="javascript:;">解决方案</a></li>
+            <div><span class="nva-span"></span></div>
+            <li><a href="javascript:;">资讯中心</a></li>
+            <div><span class="nva-span"></span></div>
+            <li><a href="javascript:;">关于我们</a></li>
+        </ul>
+        <!-- 头部 右 -->
+        <div><span class="nva-span1"></span></div>
+        <div>
+            <ul class="nva1">
+                <li><a id="btns1" class="nva-landing" href="javascript:;">登陆</a></li>
+                <div><span class="nva-span"></span></div>
+                <li><a id="btns2" class="nva-landing nva-login" href="javascript:;">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(".nva-ul a").click(function(){
+        $(".nva-ul a").removeClass("nav-hover");
+        $(this).addClass("nav-hover");
+    })
+    $("#btns1").click(function(){
+        window.location.href="login.html";
+    })
+    $("#btns2").click(function(){
+        window.location.href="reg.html";
+    })
+    window.onload=function(){
+        setTimeout(() => {
+            $("#n").addClass("nav-hover");
+        }, 100);
+    }
+    $("#n").click(function(){
+        window.location.href="index.html";
+    })
+    $("#n1").click(function(){
+        window.location.href="products.html";
+    })
+</script>

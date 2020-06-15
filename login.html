@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header" class="container"></header>
+<div id="app">
+<div id="context">
+    <div id="continue">
+        <table>
+            <tr>
+                <td>
+                    <h4>会员登陆</h4>
+                </td>
+                <td align="right">
+                    <a href="javascript:;">免费注册会员</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" class="uname" placeholder="请输入用户名" v-model="uname">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="color:#fff;">
+                    用户名6~10位
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="password" class="upwd" placeholder="请输入用户密码" v-model="upwd">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="color:#fff;">
+                    密码1~6位
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="r">
+                    <label for="r">自动登录</label>
+                </td>
+                <td  align="right">
+                    <a href="javascript:;">忘记密码？</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button @click="login" id="btn" @mouseover="mouse">登陆</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="color: #fff;">其他方式登陆：<a href="javascript:;" id="wei" class="modal-container" id="modal-opened"><img style="background-color: #fff;" src="img/login/wechat.png" alt=""></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="weixing di" id="di">
+    <div id="weixingdenglu">
+        <span>微信登陆</span>
+        <span style="margin-left: 210px; cursor: pointer;" id="spanx">X</span>
+    </div>
+    <div style="text-align: center;">
+        <img style="padding:80px 80px 20px" src="img/login/weweima.png" alt="">
+        <span style="font-size: 13px;">请使用微信扫描二维码</span>
+    </div>
+</div>
+    <div class="alert fade" v-show="i!=1">
+		<span class="close">×</span>
+		<p>用户名或密码错误</p>
+    </div>
+    <div class="alert fade bg" v-show="n!=1">
+		<span class="close">×</span>
+		<p>登陆成功,三秒自动为你返回首页</p>
+	</div>
+</div>
+<footer id="footer" class="container"></footer>
+<script src="js/jquery.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/qs.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
